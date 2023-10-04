@@ -19,7 +19,7 @@ const PaginationBar: React.FC<PaginationBarProps> = ({ count }) => {
 
   const PaginationButtons = () => {
     return [...Array(Math.ceil(count / 10) + 1)].map((_, index) => (
-      <PageBtn key={index + 1} onClick={() => handlePageClick(index)} isActive={index === currentPage - 1}>
+      <PageBtn key={index + 1} onClick={() => handlePageClick(index + 1)} isActive={index === currentPage - 1}>
         {index + 1}
       </PageBtn>
     ));
